@@ -9,7 +9,7 @@ public class Desempenho {
 
 	public void exibirPorMateria(Aluno aluno) {
 		
-		System.out.println("materia"+ aluno.getNome());
+		System.out.println("Nome do aluno: "+ aluno.getNome() + " Media por materia: " + aluno.getMediaPorMateria());
 		
 	}
 

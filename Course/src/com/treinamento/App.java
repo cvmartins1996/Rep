@@ -6,7 +6,7 @@ public class App {
 		Materia ingles = new Materia("ingles");
 		ingles.adicionarNotas(new Nota(9.2f));
 		ingles.adicionarNotas(new Nota(10f));
-		aluno.adicionarMaterias(ingles);
+		aluno.setMaterias(ingles);
 		Desempenho desempenho = new Desempenho();
 		desempenho.exibir(aluno);
 	}

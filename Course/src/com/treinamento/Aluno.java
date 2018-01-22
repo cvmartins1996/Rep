@@ -11,28 +11,17 @@ public class Aluno {
 	public Aluno(String nome) {
 		this.nome = nome;
 	}
-
-	public void adicionarNotas(Nota nota) {
-		notas.add(nota);
-	}
 	
-	public float somatoriaDeNotas() {
-		float somatoriaDeNotas = 0;
-		for (Nota nota : notas) {
-			somatoriaDeNotas = somatoriaDeNotas + nota.getValor();
-		}
-		return (somatoriaDeNotas/notas.size());
-	}
-	
-	public float getMedia() {
-		return somatoriaDeNotas();
-	}
-
 	public String getNome() {
 		return nome;
 	}
 	
-	public void adicionarMaterias(Materia materia) {
+	public void setMaterias(Materia materia) {
 		this.materia = materia;
 	}
+
+	public float getMediaPorMateria() {
+		return materia.getMedia();
+	}
+ 
 }
