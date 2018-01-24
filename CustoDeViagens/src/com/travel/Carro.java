@@ -1,17 +1,33 @@
 package com.travel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Carro {
 
-	private String nome;
-	private float valor;
-
-	public Carro(String nome, float valor) {
+	String nome;
+	private List<Destino> destinos = new ArrayList<>();
+	Consumo consumo;
+	
+	public Carro(String nome) {
 		this.nome = nome;
-		this.valor = valor;
 	}
-
-	public float getValor() {
-		return valor;
+	
+	public void adicionarDestino(Destino destino) {
+		destinos.add(destino);
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public List<Destino> getDestino() {
+		return destinos;
+	}
+	
+	public void adicionarConsumo(Consumo consumo) {
+		this.consumo = consumo;
+	}
+	
 
 }

@@ -1,13 +1,11 @@
 package com.travel;
 public class App {
 	public static void main(String[] a) {
-		
+		Carro corolla = new Carro("corolla");
+		corolla.adicionarDestino(new Destino("Pasadena", 500f));
+		corolla.adicionarConsumo(new Consumo(8.2f));
 		Desempenho desempenho = new Desempenho();
-		Viagem viagem = new Viagem();
-		new Carro("corolla", 8.2f);
-		new Posto(4.2f);
-		viagem.adicionarDestino("Pasadena");
-		viagem.verificarDistancia(new Distancia(500f));
-		desempenho.exibir(viagem);
+		desempenho.exibir(corolla);
+		
 	}
 }
