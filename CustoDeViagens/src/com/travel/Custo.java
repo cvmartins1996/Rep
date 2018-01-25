@@ -1,9 +1,11 @@
 package com.travel;
 
-public class Consumo {
+public class Custo {
 	float valor;
-	public Consumo(float valor) {
+	
+	public Custo(float valor) {
 		this.valor = valor;
 	}
+	
 
 }

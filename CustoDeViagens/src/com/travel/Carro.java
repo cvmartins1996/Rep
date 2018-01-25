@@ -7,7 +7,7 @@ public class Carro {
 
 	String nome;
 	private List<Destino> destinos = new ArrayList<>();
-	Consumo consumo;
+	Custo custo;
 	
 	public Carro(String nome) {
 		this.nome = nome;
@@ -25,8 +25,8 @@ public class Carro {
 		return destinos;
 	}
 	
-	public void adicionarConsumo(Consumo consumo) {
-		this.consumo = consumo;
+	public void adicionarConsumo(Custo custo) {
+		this.custo = custo;
 	}
 	
 
