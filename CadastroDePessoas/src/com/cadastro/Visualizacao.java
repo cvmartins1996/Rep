@@ -6,6 +6,11 @@ public class Visualizacao {
 		informacoesNecessarias(pessoa);
 		complementares(pessoa);
 		opcoesDeCredito(pessoa);
+		compraEfetuada(pessoa);
+	}
+
+	private void compraEfetuada(Pessoa pessoa) {
+		System.out.println("\nSaldo após efetuar a compra: " + pessoa.verificaCreditos());
 	}
 
 	private void opcoesDeCredito(Pessoa pessoa) {

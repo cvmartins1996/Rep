@@ -1,5 +1,8 @@
 package com.cadastro;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pessoa {
 
 	private String nome;
@@ -8,6 +11,7 @@ public class Pessoa {
 	private Email email;
 	private Job job;
 	private Credito credito;
+	private List<Transacao> transacoes = new ArrayList<>();
 	
 	public Pessoa(String nome, int idade) {
 		this.nome = nome;
@@ -60,5 +64,20 @@ public class Pessoa {
 	private float creditoDisponivel() {
 		return credito.getCredito();
 	}
-	
+
+	public void adicionarTransacao(Transacao transacao) {
+		transacoes.add(transacao);
+	}
+
+	public float verificaCreditos() {
+		return compraEfetuadaNoCredito();
+	}
+
+	private float compraEfetuadaNoCredito() {
+		float creditoRestante = creditoDisponivel();
+		for (Transacao transacao : transacoes) {
+			creditoRestante = creditoRestante - transacao.transacaoCredito();
+		}
+		return creditoRestante;
+	}
 }

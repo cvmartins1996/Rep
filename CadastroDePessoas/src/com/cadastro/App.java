@@ -13,7 +13,10 @@ public class App {
 		Credito credito = new Credito(250f);
 		credito.setJuros(420f);
 		pessoa.setCredito(credito);
+		Compra compra = new Compra(180f);
+		Transacao transacao = new Transacao();
+		transacao.efeturarTransacao(compra);
+		pessoa.adicionarTransacao(transacao);
 		visualizacao.cadastrosEfetuados(pessoa);
-		
 	}
 }
