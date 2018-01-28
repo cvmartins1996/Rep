@@ -7,6 +7,7 @@ public class Pessoa {
 	private Financeiro financeiro;
 	private Email email;
 	private Job job;
+	private Credito credito;
 	
 	public Pessoa(String nome, int idade) {
 		this.nome = nome;
@@ -44,7 +45,20 @@ public class Pessoa {
 	}
 
 	public void setCredito(Credito credito) {
-		
+		this.credito = credito;
+	}
+	
+	public String getInformacoesDeCredito() {
+		String msg = ("\nCrédito dispónivel: " + creditoDisponivel() + "\nJuros Anual: " + jurosAnual());
+		return msg;
+	}
+
+	private float jurosAnual() {
+		return credito.getJuros();
+	}
+
+	private float creditoDisponivel() {
+		return credito.getCredito();
 	}
 	
 }
