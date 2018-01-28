@@ -4,8 +4,8 @@ public class Visualizacao {
 
 	public void cadastrosEfetuados(Pessoa pessoa) {
 		informacoesNecessarias(pessoa);
-		complementares(pessoa);
-		opcoesDeCredito(pessoa);
+		informacoesComplementares(pessoa);
+		informacoesDeCredito(pessoa);
 		compraEfetuada(pessoa);
 	}
 
@@ -13,7 +13,7 @@ public class Visualizacao {
 		System.out.println("\nSaldo após efetuar a compra: " + pessoa.verificaCreditos());
 	}
 
-	private void opcoesDeCredito(Pessoa pessoa) {
+	private void informacoesDeCredito(Pessoa pessoa) {
 		System.out.println("\nCrédito:" + pessoa.getInformacoesDeCredito());
 	}
 
@@ -21,7 +21,7 @@ public class Visualizacao {
 		System.out.println("\nDados Pessoais: " + pessoa.getNome() +  " " + pessoa.getIdade() + "\nFinanceiro: " + pessoa.getScore() );
 	}
 
-	private void complementares(Pessoa pessoa) {
+	private void informacoesComplementares(Pessoa pessoa) {
 		System.out.println("\nInformações Complementares: " + pessoa.demaisInformacoes());
 	}
 

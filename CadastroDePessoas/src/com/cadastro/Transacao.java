@@ -9,7 +9,6 @@ public class Transacao {
 	}
 	
 	public float transacaoCredito() {
-		
 		return compra.getValor();
 	}
 
