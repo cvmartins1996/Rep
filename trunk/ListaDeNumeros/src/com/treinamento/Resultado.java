@@ -50,4 +50,6 @@ public class Resultado {
 		return valorMinimo;
 	}
 	
+	
+
 }
