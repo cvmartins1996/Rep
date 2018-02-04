@@ -7,6 +7,7 @@ public class Pessoa {
 	private Job job;
 	private Renda renda;
 	private Escolaridade escolaridade;
+	private Patrimonio patrimonio;
 
 	public Pessoa(String nome, int idade) {
 		this.nome = nome;
@@ -44,5 +45,14 @@ public class Pessoa {
 	public String getEscolaridade() {
 		return escolaridade.getEscolaridade();
 	}
+
+	public void adicionarPatrimonio(Patrimonio patrimonio) {
+		this.patrimonio = patrimonio;	
+	}
+	
+	public float getPatrimonio() {
+		return patrimonio.getValor();
+	}
+
 
 }
