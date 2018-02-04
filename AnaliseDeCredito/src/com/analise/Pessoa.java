@@ -8,10 +8,19 @@ public class Pessoa {
 	private Renda renda;
 	private Escolaridade escolaridade;
 	private Patrimonio patrimonio;
+	private int cpf;
+	private int rg;
 
 	public Pessoa(String nome, int idade) {
 		this.nome = nome;
 		this.idade = idade;
+	}
+
+	public Pessoa(String nome, int idade, int cpf, int rg) {
+		this.nome = nome;
+		this.idade =  idade;
+		this.cpf = cpf;
+		this.rg = rg;
 	}
 
 	public void adicionarOcupacao(Job job) {
@@ -30,8 +39,8 @@ public class Pessoa {
 		return idade;
 	}
 
-	public float getRenda() {
-		return renda.getValor();
+	public Renda getRenda() {
+		return renda;
 	}
 	
 	public String getJob() {
@@ -52,6 +61,14 @@ public class Pessoa {
 	
 	public float getPatrimonio() {
 		return patrimonio.getValor();
+	}
+
+	public int getRg() {
+		return rg;
+	}
+
+	public int getCpf() {
+		return cpf;
 	}
 
 

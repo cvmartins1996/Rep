@@ -6,6 +6,7 @@ public class Score {
 	private int scorePorMeioDaRenda;
 	private Pessoa pessoa;
 	private int scorePorPatrimonio;
+	private int scorePeloBanco;
 
 	public void analisarPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
@@ -29,7 +30,7 @@ public class Score {
 
 	private void scorePorMeioDaRenda(Pessoa pessoa) {
 		scorePorMeioDaRenda = 0;
-		if (pessoa.getRenda() < 900f) {
+		if (pessoa.getRenda().getValor() < 900f) {
 			scorePorMeioDaRenda = 50;
 		} else {
 			scorePorMeioDaRenda = 120;
@@ -57,13 +58,22 @@ public class Score {
 		return scorePorPatrimonio;
 	}
 	
-	public int getScoreTotal() {
-		return getScoreInicial() + getScorePorMeioDaRenda() + getScorePorPatrimonio();
-	}
 	
 	public String getInformaçoesDoSolicitante() {
 		String msg = "\nNome do solicitante: " + pessoa.getNome() +"\nIdade do solicitante: " + pessoa.getIdade() + "\nEscolaridade do solicitante: " + pessoa.getEscolaridade() + "\nOcupação do solicitante: " + pessoa.getJob();
 		return msg;
 	}
 
+	public void verificarNotasEmitidasPelaFinasa(Financeiro finasa) {
+		scorePeloBanco = 0;
+		scorePeloBanco = finasa.certificarScore();
+	}
+
+	public int getScorePeloBanco() {
+		return scorePeloBanco;
+	}
+	
+	public int getScoreTotal() {
+		return getScoreInicial() + getScorePorMeioDaRenda() + getScorePorPatrimonio() + getScorePeloBanco();
+	}
 }
